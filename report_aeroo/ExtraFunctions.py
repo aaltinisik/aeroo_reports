@@ -33,8 +33,8 @@
 from openerp import registry, models, _
 from barcode import barcode
 from openerp.tools import translate
-#from currency_to_text import currency_to_text
-from ctt_objects import supported_language
+from currency_to_text import currency_to_text
+#from ctt_objects import supported_language
 import base64
 import StringIO
 from PIL import Image
