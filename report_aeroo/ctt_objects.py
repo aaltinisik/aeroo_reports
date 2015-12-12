@@ -129,7 +129,7 @@ class ctt_currency(object):
 
     def frc_to_text(self, sum_frc):
         # is the fraction sum one
-        if sum_frc == 0
+        if sum_frc == 0:
             return u''
         if sum_frc == 1 or (str(sum_frc)[-1] == '1' and str(sum_frc)[-2] !='1'):
             return self.frc_singular
