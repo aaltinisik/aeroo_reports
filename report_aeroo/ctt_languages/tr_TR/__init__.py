@@ -13,7 +13,7 @@ class tr_TR(ctt_language):
     def _init_lang(self):
         self.name = 'tr_TR'
         # millionsdigits - masculine, singular
-        self.number_sng_msc = [u'sıfır', u'bir', u'iki', u'üç', u'dört', u'beş',
+        self.number_sng_msc = [u'', u'bir', u'iki', u'üç', u'dört', u'beş',
                                u'altı', u'yedi', u'sekiz', u'dokuz']
         # tens - masculine, singular
         self.tens_sng_msc = [u'', u'on', u'yirmi', u'otuz', u'kırk',u'elli',
