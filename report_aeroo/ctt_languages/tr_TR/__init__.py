@@ -13,20 +13,20 @@ class tr_TR(ctt_language):
     def _init_lang(self):
         self.name = 'tr_TR'
         # millionsdigits - masculine, singular
-        self.number_sng_msc = [u'', u'bir', u'iki', u'üç', u'dört', u'beş',
+        self.number_sng_msc = [u'sıfır', u'bir', u'iki', u'üç', u'dört', u'beş',
                                u'altı', u'yedi', u'sekiz', u'dokuz']
         # tens - masculine, singular
         self.tens_sng_msc = [u'on', u'on bir', u'on iki', u'on üç', u'on dört',
                              u'on beş', u'on altı', u'on yedi', u'on sekiz',
                              u'on dokuz']
         # teens - masculine
-        self.teens = [u'on', u'on bir', u'on iki', u'on üç', u'on dört',
-                      u'on beş', u'on altı', u'on yedi', u'on sekiz',
-                      u'on dokuz']
+        self.teens = [u'', u'on', u'yirmi', u'otuz', u'kırk',
+                      u'elli', u'atmış', u'yetmiş', u'seksen',
+                      u'doksan']
         # multiplier - masculine, singular                      
-        self.multi_sng_msc = [u'yüz', u' bin', u' milyon', u' milyar']
+        self.multi_sng_msc = [u'yüz', u' bin', u' milyon', u' milyar',u' trilyon']
                 # multiplier - masculine, plural
-        self.multi_plr_msc = [u' yüz', u' bin', u' milyon',u' milyar']
+        self.multi_plr_msc = [u' yüz', u' bin', u' milyon',u' milyar'u' trilyon']
         
         # next line is needed for correct loading of currencies 
         import currencies
