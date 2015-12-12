@@ -14,14 +14,14 @@ class tr_TR(ctt_language):
         self.name = 'tr_TR'
         # millionsdigits - masculine, singular
         self.number_sng_msc = [u'', u'bir', u'iki', u'üç', u'dört', u'beş',
-                               u'alti', u'yedi', u'sekiz', u'dokuz']
+                               u'altı', u'yedi', u'sekiz', u'dokuz']
         # tens - masculine, singular
         self.tens_sng_msc = [u'on', u'on bir', u'on iki', u'on üç', u'on dört',
-                             u'on beş', u'on alti', u'on yedi', u'on sekiz',
+                             u'on beş', u'on altı', u'on yedi', u'on sekiz',
                              u'on dokuz']
         # teens - masculine
         self.teens = [u'on', u'on bir', u'on iki', u'on üç', u'on dört',
-                      u'on beş', u'on alti', u'on yedi', u'on sekiz',
+                      u'on beş', u'on altı', u'on yedi', u'on sekiz',
                       u'on dokuz']
         # multiplier - masculine, singular                      
         self.multi_sng_msc = [u'yüz', u' bin', u' milyon', u' milyar']
@@ -44,6 +44,7 @@ class tr_TR(ctt_language):
         digit1 = u''
         digit2 = u''
         digit3 = u''
+        onethousandflag = 0
         chunklength = len(chunk)
         # placing digits in right places
         if chunklength == 1:
@@ -80,9 +81,12 @@ class tr_TR(ctt_language):
             spacer = ''
             if len(words) > 0: spacer = u' '
             if int(digit3) > 0:
-                words += spacer + number[int(digit3)]
+                if int(chunknr) == 1  and ((digit1 == '0' and digit2 == '0' and digit3 == '1') or (digit2 == '' and digit3 == '1')):
+                    onethousandflag = 1
+                else:
+                    words += spacer + number[int(digit3)]
         # end processing
-        if len(words) > 0 :
+        if len(words) > 0 or onethousandflag == 1:
             if digit3 == '1' and chunknr > 0:
                 return words + self.multi_sng_msc[chunknr]
             elif digit3 != '1' and chunknr > 0:
