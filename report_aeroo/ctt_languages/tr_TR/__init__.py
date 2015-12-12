@@ -12,7 +12,7 @@ from openerp.addons.report_aeroo.ctt_objects import ctt_language
 class tr_TR(ctt_language):
     def _init_lang(self):
         self.name = 'tr_TR'
-        # digits - masculine, singular
+        # millionsdigits - masculine, singular
         self.number_sng_msc = [u'', u'bir', u'iki', u'üç', u'dört', u'beş',
                                u'alti', u'yedi', u'sekiz', u'dokuz']
         # tens - masculine, singular
@@ -25,6 +25,8 @@ class tr_TR(ctt_language):
                       u'on dokuz']
         # multiplier - masculine, singular                      
         self.multi_sng_msc = [u'yüz', u' bin', u' milyon', u' milyar']
+                # multiplier - masculine, plural
+        self.multi_plr_msc = [u' yüz', u' bin', u' milyon',u' milyar']
         
         # next line is needed for correct loading of currencies 
         import currencies
