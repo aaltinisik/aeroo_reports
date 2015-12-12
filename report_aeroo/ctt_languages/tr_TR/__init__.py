@@ -16,13 +16,12 @@ class tr_TR(ctt_language):
         self.number_sng_msc = [u'sıfır', u'bir', u'iki', u'üç', u'dört', u'beş',
                                u'altı', u'yedi', u'sekiz', u'dokuz']
         # tens - masculine, singular
-        self.tens_sng_msc = [u'on', u'on bir', u'on iki', u'on üç', u'on dört',
-                             u'on beş', u'on altı', u'on yedi', u'on sekiz',
-                             u'on dokuz']
+        self.tens_sng_msc = [u'', u'on', u'yirmi', u'otuz', u'kırk',u'elli',
+                              u'atmış', u'yetmiş', u'seksen', u'doksan']
         # teens - masculine
-        self.teens = [u'', u'on', u'yirmi', u'otuz', u'kırk',
-                      u'elli', u'atmış', u'yetmiş', u'seksen',
-                      u'doksan']
+        self.teens = [u'on', u'on bir', u'on iki', u'on üç', u'on dört',
+                      u'on beş', u'on altı', u'on yedi', u'on sekiz',
+                      u'on dokuz']
         # multiplier - masculine, singular                      
         self.multi_sng_msc = [u'yüz', u' bin', u' milyon', u' milyar',u' trilyon']
                 # multiplier - masculine, plural
