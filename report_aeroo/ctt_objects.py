@@ -112,6 +112,9 @@ class ctt_currency(object):
         suppl.supported_currency.update({self.code : self})
 
     def cur_to_text(self, sum_cur):
+        # if fraction is zero dont write
+        if sum_cur == 0:
+            return u''
         # is the currency sum one
         if sum_cur == 1 or (str(sum_cur)[-1] == '1' and str(sum_cur)[-2] !='1'):
             return self.cur_singular
@@ -128,9 +131,10 @@ class ctt_currency(object):
             return self.cur_plural
 
     def frc_to_text(self, sum_frc):
-        # is the fraction sum one
+        # if fraction is zero dont write
         if sum_frc == 0:
             return u''
+        # is the fraction sum one
         if sum_frc == 1 or (str(sum_frc)[-1] == '1' and str(sum_frc)[-2] !='1'):
             return self.frc_singular
         # 2,3 and 4 yields different plural form, if defined
