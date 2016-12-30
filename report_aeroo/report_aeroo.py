@@ -417,9 +417,9 @@ class Aeroo_report(report_sxw):
         basic = NewTextTemplate(source=base64.decodestring(file_data))
         try:
             if genshi_version<='0.6':
-                data = preprocess(basic.generate(**oo_parser.localcontext).render().decode('utf8').encode(report_xml.charset), aeroo_print)
+                data = preprocess(basic.generate(**oo_parser.localcontext).render().decode('utf8').encode(report_xml.charset,errors="ignore"), aeroo_print)
             else:
-                data = preprocess(basic.generate(**oo_parser.localcontext).render().encode(report_xml.charset), aeroo_print)
+                data = preprocess(basic.generate(**oo_parser.localcontext).render().encode(report_xml.charset,errors="ignore"), aeroo_print)
         except Exception, e:
             self.logger(str(e), logging.ERROR)
             return False, output
