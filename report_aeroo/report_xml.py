@@ -258,7 +258,7 @@ class report_xml(models.Model):
                         FROM ir_act_report_xml \
                         WHERE report_name=%s", (name,))
             record = cr.dictfetchone()
-            if record['report_type'] == 'aeroo':
+            if record and record['report_type'] == 'aeroo':
                 if record['active'] == True:
                     parser = rml_parse
                     if record['parser_state']=='loc' and record['parser_loc']:
