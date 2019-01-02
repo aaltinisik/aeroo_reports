@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <openerp>
-    <data noupdate="1">
+    <data noupdate="0">
 
 	    <record model="aeroo.printers" id="aeroo_printers_def_purpose_printer">
 		    <field name="name">User's Default Genreral Purpose Printer</field>
@@ -10,6 +10,11 @@
 	    <record model="aeroo.printers" id="aeroo_printers_def_label_printer">
 		    <field name="name">User's Default Label Printer</field>
 		    <field name="code">user-def-label-printer</field>
+	    </record>
+
+		<record model="aeroo.printers" id="aeroo_printers_def_waybill_printer">
+		    <field name="name">Warehouse Default Waybil Printer</field>
+		    <field name="code">warehouse-def-waybill-printer</field>
 	    </record>
 
     </data>

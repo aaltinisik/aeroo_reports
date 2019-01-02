@@ -41,7 +41,8 @@ except ImportError:
     pass
 
 SUPPORTED_PRINT_FORMAT = ('pdf','raw')
-SPECIAL_PRINTERS = ('user-def-gen-purpose-printer','user-def-label-printer')
+SPECIAL_PRINTERS = ('user-def-gen-purpose-printer','user-def-label-printer','warehouse-def-waybill-printer')
+
 
 class report_print_actions(models.TransientModel):
     _name = 'aeroo.print_actions'
